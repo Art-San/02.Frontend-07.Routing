@@ -7,10 +7,6 @@ import Home from './components/Home'
 import Stats from "./components/Stats"
 import NotFound from "./components/NotFound"
 
-// {/* <Redirect to='/404' />  */}                   // Просто переадресация 
-// {/* <Redirect from="admin" to='/dashboard'/> */}  // Переадресация с несуществуещего (удаленного) адреса
-        
-
 function App() {
   return (
     <div>

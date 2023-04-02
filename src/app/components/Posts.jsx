@@ -14,7 +14,7 @@ const Posts = ({ match, location }) => {
   useEffect(() => {
   console.log(search)
   }, [search])
-  // console.log('serch', search) // {count: '1', sortBy: 'newest'} // Query-параметры
+  console.log('serch', search) // {count: '1', sortBy: 'newest'} // Query-параметры
   const postId = match.params.postId
   const cropPosts = search
       ? _(posts).slice(0).take(search.count).value()
