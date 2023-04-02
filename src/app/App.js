@@ -6,8 +6,12 @@ import Login from './components/Login'
 import Home from './components/Home'
 import Stats from "./components/Stats";
 
-// Swetch упорядочивай пути *Ёлка к верху спилом* 
-// (от конкретных к более общим)
+// <Route path='/' exact component={Home}/> - первый вариант 
+
+// <Route 
+// path='/dashboard'
+// render={(props) => <Dashboard isAdmin={false} {...props}/>} = 
+
 function App() {
   return (
     <div>
@@ -16,7 +20,13 @@ function App() {
       <Switch>
         <Route path='/' exact component={Home}/>
         <Route path='/dashboard/stats' component={Stats}/>
-        <Route path='/dashboard' component={Dashboard}/>
+        {/* <Route path='/dashboard' component={Dashboard}/> */}
+        <Route
+          path='/dashboard'
+          render={(props) => {
+            return false && <Dashboard isAdmin={false} {...props}/>
+        }}
+          />
         <Route path='/posts' component={Posts}/>
         <Route path='/login' component={Login}/>
       </Switch>
