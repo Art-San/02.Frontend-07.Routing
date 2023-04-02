@@ -1,13 +1,12 @@
 import React from 'react'
 
-const Post = ({ match, posts }) => {
-    const postId = match.params.postId
+const Post = ({ id, posts }) => {
     const getPostById = (id) => {
         return posts.find((post) => post.id.toString() === id)
     }
-    const post = getPostById(postId)
+    const post = getPostById(id)
   return (
-    <h2>{post ? post.label : `Пост c этим id:${postId} не найден`}</h2>
+    <h2>{post ? post.label : `Пост c этим id:${id} не найден`}</h2>
   )
 }
 
