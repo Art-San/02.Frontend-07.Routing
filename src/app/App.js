@@ -5,6 +5,7 @@ import Posts from './components/Posts'
 import Login from './components/Login'
 import Home from './components/Home'
 import Stats from "./components/Stats"
+// Query-параметры - это парамктры запроса http://localhost:3000/posts/?sortBy=newest&count=1
 
 function App() {
   return (
