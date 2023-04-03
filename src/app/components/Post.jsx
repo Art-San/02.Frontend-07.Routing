@@ -2,14 +2,14 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 
 
-const Post = ({ id, posts }) => { // history заменим  на хук
+const Post = ({ id, posts }) => {
     const history = useHistory()
     const getPostById = (id) => {
         return posts.find((post) => post.id.toString() === id)
     }
     const hanleSave = () => {
-      history.push('/posts') // Можем вернутся назад
-      // history.replace('/posts') // не вернется назад после редактирования
+      history.push('/posts')
+      // history.replace('/posts')
     }
     const post = getPostById(id)
   return (
@@ -24,9 +24,6 @@ const Post = ({ id, posts }) => { // history заменим  на хук
         Сохранить
     </button>
     </>
-    // <button
-    //   onClick={hanleSave} >Сохранить</button>
-    // </>
   )
 }
 
